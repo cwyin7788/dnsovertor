@@ -1,3 +1,5 @@
+![](./logo.png)
+
 # DNSOverTor
 
 ### 为什么要用 DNSOverTor ？
@@ -6,17 +8,17 @@
 
 ###  DNSOverTor 的优点:
 
-墙外域名DNS的解释走tor，保障匿名性
+1. 墙外域名DNS的解释走tor，保障匿名性
 
-墙内域名交回给墙内dns 119.29.29.29 / 223.5.5.5解释，令使用墙内应用增加DNS解释速度
+2. 墙内域名使用forwarding rules，交回给墙内dns 119.29.29.29 / 223.5.5.5解释，令使用墙内应用增加DNS解释速度，本服務使用以下forwarding rules： https://raw.githubusercontent.com/iYato/dnscrypt-proxy-china-forwarding-list/main/forwarding-rules.txt
 
-绝不纪录解释日志
+3. 绝不纪录解释日志
 
-不使用EDNS，不会把用户IP网段往上游发
+4. 不使用EDNS，不会把用户IP网段往上游发
 
-去广告、钓鱼网站
+5. 去广告、钓鱼网站
 
-国外域名的DNS解释走tor虽然会有点慢，但保障了匿名，而由于使用了Cloudflare CDN，Cloudflare有它自己的Anycast技术，只要本地线路对Cloudflare友好，DoH的解释分别有Cloudflare的CDN缓存以及AdGuardHome的缓存，可以做到双加速效果。
+6. 国外域名的DNS解释走tor虽然会有点慢，但保障了匿名，而由于使用了Cloudflare CDN，Cloudflare有它自己的Anycast技术，只要本地线路对Cloudflare友好，DoH的解释分别有Cloudflare的CDN缓存以及AdGuardHome的缓存，可以做到双加速效果。
 
 ### DNSOverTor 的缺点:
 
